@@ -314,6 +314,7 @@ namespace NumCIL.Generic
     /// </summary>
     /// <typeparam name="T">The type of data to generate</typeparam>
 	/// <typeparam name="TRand">The random number generator to use</typeparam>
+    /// <typeparam name="TRange">The range generator to use</typeparam>
     /// <typeparam name="TConv">The conversion operator to use</typeparam>
     public class Generator<T, TRand, TRange, TConv> : IGenerator<T>
         where TRand : struct, IRandomGeneratorOp<T>

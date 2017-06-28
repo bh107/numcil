@@ -82,7 +82,7 @@ namespace NumCIL
 		/// <typeparam name="Tb">The type of output data to operate on</typeparam>
 		/// <typeparam name="C">The type of operation to perform</typeparam>
 		/// <param name="op">The operation instance</param>
-		/// <param name="in1">The left-hand-side input argument</param>
+		/// <param name="scalar">The left-hand-side scalar input argument</param>
 		/// <param name="in2">The right-hand-side input argument</param>
 		/// <param name="out">The output target</param>
 		private static bool UFunc_Op_Inner_BinaryConv_LhsScalar_Flush_Typed<Ta, Tb, C>(C op, Ta scalar, NdArray<Ta> in2, NdArray<Tb> @out)
@@ -122,7 +122,7 @@ namespace NumCIL
 		/// <typeparam name="C">The type of operation to perform</typeparam>
 		/// <param name="op">The operation instance</param>
 		/// <param name="in1">The left-hand-side input argument</param>
-		/// <param name="in2">The right-hand-side input argument</param>
+		/// <param name="scalar">The right-hand-side scalar input argument</param>
 		/// <param name="out">The output target</param>
 		private static bool UFunc_Op_Inner_BinaryConv_RhsScalar_Flush_Typed<Ta, Tb, C>(C op, NdArray<Ta> in1, Ta scalar, NdArray<Tb> @out)
 		{
@@ -198,7 +198,7 @@ namespace NumCIL
 		/// <typeparam name="Tb">The type of output data to generate</typeparam>
 		/// <typeparam name="C">The type of operation to perform</typeparam>
 		/// <param name="op">The operation instance</param>
-		/// <param name="in1">The input argument</param>
+		/// <param name="scalar">The scalar input argument</param>
 		/// <param name="out">The output target</param>
 		private static bool UFunc_Op_Inner_UnaryConv_Flush_Scalar_Typed<Ta, Tb, C>(C op, Ta scalar, NdArray<Tb> @out)
 			where C : IUnaryConvOp<Ta, Tb>

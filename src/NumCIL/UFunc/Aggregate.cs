@@ -122,7 +122,6 @@ namespace NumCIL
 		/// <typeparam name="C">The type of operation to reduce with</typeparam>
 		/// <param name="op">The instance of the operation to reduce with</param>
 		/// <param name="in1">The input argument</param>
-		/// <param name="axis">The axis to reduce</param>
 		/// <param name="out">The output target</param>
 		/// <returns>The output target</returns>		
 		private static bool UFunc_Aggregate_Inner_Flush_Typed<T, C>(C op, NdArray<T> in1, out T @out)

@@ -3,8 +3,6 @@
 <#@ import namespace="System.Linq" #>
 <#@ import namespace="System.Text" #>
 <#@ import namespace="System.Collections.Generic" #>
-
-
 #region Copyright
 /*
 This file is part of Bohrium and copyright (c) 2012 the Bohrium

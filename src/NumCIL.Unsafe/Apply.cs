@@ -148,11 +148,13 @@ namespace NumCIL.Unsafe
 		/// Attempts to use a typed version of the Binary call, 
 		/// to avoid dependency on the JIT being able to inline struct methods
 		/// </summary>
-		/// <typeparam name="C">The type of operation to perform</typeparam>
 		/// <param name="op">The operation instance</param>
 		/// <param name="in1">The left-hand-side input argument</param>
 		/// <param name="in2">The right-hand-side input argument</param>
 		/// <param name="out">The output target</param>
+		/// <typeparam name="Ta">The type of elements in the left-hand-side input</typeparam>
+		/// <typeparam name="Tb">The type of elements in the right-hand-side input</typeparam>
+		/// <typeparam name="C">The type of operation to perform</typeparam>
 		private static bool UFunc_Op_Inner_Binary_Flush_Typed<Ta, Tb, C>(C op, NdArray<Ta> in1,  NdArray<Ta> in2, NdArray<Tb> @out)
 		{
 			System.Reflection.MethodInfo f;
@@ -185,11 +187,13 @@ namespace NumCIL.Unsafe
 		/// Attempts to use a typed version of the Binary call, 
 		/// to avoid dependency on the JIT being able to inline struct methods
 		/// </summary>
-		/// <typeparam name="C">The type of operation to perform</typeparam>
 		/// <param name="op">The operation instance</param>
-		/// <param name="in1">The left-hand-side input argument</param>
+		/// <param name="scalar">The left-hand-side scalar input argument</param>
 		/// <param name="in2">The right-hand-side input argument</param>
 		/// <param name="out">The output target</param>
+		/// <typeparam name="Ta">The type of the left-hand-side scalar input</typeparam>
+		/// <typeparam name="Tb">The type of the righ-hand-side input elements</typeparam>
+		/// <typeparam name="C">The type of operation to perform</typeparam>
 		private static bool UFunc_Op_Inner_Binary_LhsScalar_Flush_Typed<Ta, Tb, C>(C op, Ta scalar,  NdArray<Ta> in2, NdArray<Tb> @out)
 		{
 			System.Reflection.MethodInfo f;
@@ -222,11 +226,13 @@ namespace NumCIL.Unsafe
 		/// Attempts to use a typed version of the Binary call, 
 		/// to avoid dependency on the JIT being able to inline struct methods
 		/// </summary>
-		/// <typeparam name="C">The type of operation to perform</typeparam>
 		/// <param name="op">The operation instance</param>
 		/// <param name="in1">The left-hand-side input argument</param>
-		/// <param name="in2">The right-hand-side input argument</param>
+		/// <param name="scalar">The right-hand-side scalar input argument</param>
 		/// <param name="out">The output target</param>
+		/// <typeparam name="Ta">The type of the left-hand-side input elements</typeparam>
+		/// <typeparam name="Tb">The type of the right-hand-side scalar</typeparam>
+		/// <typeparam name="C">The type of operation to perform</typeparam>
 		private static bool UFunc_Op_Inner_Binary_RhsScalar_Flush_Typed<Ta, Tb, C>(C op, NdArray<Ta> in1, Ta scalar, NdArray<Tb> @out)
 		{
 			System.Reflection.MethodInfo f;
@@ -259,11 +265,12 @@ namespace NumCIL.Unsafe
 		/// Attempts to use a typed version of the Binary call, 
 		/// to avoid dependency on the JIT being able to inline struct methods
 		/// </summary>
-		/// <typeparam name="C">The type of operation to perform</typeparam>
 		/// <param name="op">The operation instance</param>
+        /// <param name="axis">The axis to reduce over</param>
 		/// <param name="in1">The left-hand-side input argument</param>
-		/// <param name="in2">The right-hand-side input argument</param>
 		/// <param name="out">The output target</param>
+		/// <typeparam name="T">The type of the data elements</typeparam>
+		/// <typeparam name="C">The type of operation to perform</typeparam>
 		internal static bool UFunc_Reduce_Inner_Flush_Typed<T, C>(C op, long axis, NdArray<T> in1, NdArray<T> @out)
 		{
 			System.Reflection.MethodInfo f;
@@ -296,11 +303,11 @@ namespace NumCIL.Unsafe
 		/// Attempts to use a typed version of the Binary call, 
 		/// to avoid dependency on the JIT being able to inline struct methods
 		/// </summary>
-		/// <typeparam name="C">The type of operation to perform</typeparam>
 		/// <param name="op">The operation instance</param>
 		/// <param name="in1">The left-hand-side input argument</param>
-		/// <param name="in2">The right-hand-side input argument</param>
 		/// <param name="out">The output target</param>
+		/// <typeparam name="T">The type of the data elements</typeparam>
+		/// <typeparam name="C">The type of operation to perform</typeparam>
 		internal static bool UFunc_Aggregate_Entry_Typed<T, C>(C op, NdArray<T> in1, out T @out)
 		{
 			System.Reflection.MethodInfo f;

@@ -1,6 +1,4 @@
-﻿
-
-#region Copyright
+﻿#region Copyright
 /*
 This file is part of Bohrium and copyright (c) 2012 the Bohrium
 team <http://www.bh107.org>.
