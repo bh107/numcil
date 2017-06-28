@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<package >
+  <metadata>
+    <id>NumCIL.Unsafe</id>
+    <version>1.0</version>
+    <title>NumCIL.Unsafe</title>
+    <authors>Kenneth Skovhede</authors>
+    <owners>Kenneth Skovhede</owners>
+    <licenseUrl>https://github.com/bh107/numcil/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/bh107/numcil</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>Unsafe extensions to NumCIL</description>
+    <releaseNotes>Initial release</releaseNotes>
+    <copyright>Copyright 2017, Kenneth Skovhede</copyright>
+    <tags>Array-Programming HPC</tags>
+    <dependencies>
+      <dependency id="NumCIL" version="1.0" />
+    </dependencies>
+  </metadata>
+  <files>
+    <file src="bin/Release/NumCIL.Unsafe.dll" target="lib/net45" />
+  </files>
+</package>
