@@ -1,9 +1,17 @@
 # NumCIL
-Numeric operations in C# (and VB, IronPyton, F#)
+Numeric operations in C# (and VB, IronPyton, F#) [![NumCIL](https://img.shields.io/nuget/dt/NumCIL.svg)](https://www.nuget.org/packages/NumCIL/) [![NumCIL.Unsafe](https://img.shields.io/nuget/dt/NumCIL.Unsafe.svg)](https://www.nuget.org/packages/NumCIL.Unsafe/)
 
 This project contains the C# implementation of an array programming library, inspired by [Numpy](http://www.numpy.org/).
 
 The library can run in fully managed mode, or transparently switch to direct memory access if the runtime allows it.
+
+To install using Nuget run:
+```
+PM> Install-Package NumCIL
+```
+
+Optionally, you can also install the direct memory manipulation library with `PM> Install-Package NumCIL.Unsafe`.
+
 
 The performance of the library is generally limited by memory transfer speeds as there is no [loop fusion](https://en.wikipedia.org/wiki/Loop_fusion) implemented, giving performance similar to what can be obtained in NumPy.
 
