@@ -1,5 +1,5 @@
-# NumCIL
-Numeric operations in C# (and VB, IronPyton, F#) [![NumCIL](https://img.shields.io/nuget/dt/NumCIL.svg)](https://www.nuget.org/packages/NumCIL/) [![NumCIL.Unsafe](https://img.shields.io/nuget/dt/NumCIL.Unsafe.svg)](https://www.nuget.org/packages/NumCIL.Unsafe/)
+# NumCIL [![NumCIL](https://img.shields.io/nuget/dt/NumCIL.svg)](https://www.nuget.org/packages/NumCIL/)
+Numeric operations in C# (and VB, IronPyton, F#) 
 
 This project contains the C# implementation of an array programming library, inspired by [Numpy](http://www.numpy.org/).
 
