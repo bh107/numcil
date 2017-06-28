@@ -1,8 +1,9 @@
 all: build
 
 DEPENDS_CS=$(find . -type f -name *.cs | xargs echo)
+DEPENDS_CSPROJ=$(find . -type f -name *.csproj | xargs echo)
 
-build: NumCIL.sln ${DEPENDS_CS}
+build: NumCIL.sln ${DEPENDS_CS} ${DEPENDS_CSPROJ}
 	msbuild /p:Configuration=Release NumCIL.sln
 
 nupkg: build
@@ -21,8 +22,8 @@ nupkg/NumCIL.Unsafe.nupkg: NumCIL.Unsafe/NumCIL.Unsafe.nuspec nupkg
 pack: nupkg nupkg/NumCIL.nupkg nupkg/NumCIL.Unsafe.nupkg
 
 deploy:
-	cd nupkg; nuget push NumCIL.nuspec
-	cd nupkg; nuget push NumCIL.Unsafe.nuspec
+	cd nupkg; nuget push NumCIL.nupkg
+	cd nupkg; nuget push NumCIL.Unsafe.nupkg
 
 
 clean:
